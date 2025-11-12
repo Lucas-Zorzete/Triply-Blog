@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triply - Your Next Adventure</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" width="150px" style="margin-top: 7px;"></a></div>
+            <nav>
+                <ul>
+                    <li><a id="malta" href="malta.html">Malta</a></li>
+                    <li><a id="ireland" href="ireland.html">Ireland</a></li>
+                    <li><a id="england" href="england.html">England</a></li>
+                    <li><a id="scotland" href="scotland.html">Scotland</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero reveal" style="background-image: url('img/global.png');">
+            <h1>Discover the World, One Diary at a Time</h1>
+        </section>
+
+        <div class="container">
+            <section class="post-list reveal">
+                <h2>Featured Diaries</h2>
+                
+                <div class="post-card reveal" id="card-malta">
+                    <div class="post-card-img" style="background-image: url('https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2023/05/valetta.jpg?w=1024');"></div>
+                    <div class="post-card-content">
+                        <h3>Malta: The Mediterranean Jewel</h3>
+                        <p>Sun-drenched history, ancient temples, and the clearest blue lagoons. **They** read the 7-day diary in Valletta, Gozo, and Comino.</p>
+                        <a href="malta.html">Read the Diary →</a>
+                    </div>
+                </div>
+
+                <div class="post-card reveal" id="card-ireland">
+                    <div class="post-card-img" style="background-image: url('https://cdn.wizard.com.br/wp-content/uploads/2014/10/11151349/curiosidades-sobre-irlanda.jpg');"></div>
+                    <div class="post-card-content">
+                        <h3>Ireland: Emerald Isles and Timeless Pubs</h3>
+                        <p>From the Cliffs of Moher to the cozy pubs of Dublin. **They** spent a week exploring the Wild Atlantic Way and Irish culture.</p>
+                        <a href="ireland.html">Read the Diary →</a>
+                    </div>
+                </div>
+
+                <div class="post-card reveal" id="card-england">
+                    <div class="post-card-img" style="background-image: url('https://humanidades.com/wp-content/uploads/2018/09/Inglaterra-1-e1579225431994.jpg');"></div>
+                    <div class="post-card-content">
+                        <h3>England: Royalty, Rock, and Roman History</h3>
+                        <p>London's energy, the mystery of Stonehenge, and the academic calm of Cambridge. **They** took a classic journey through the heart of England.</p>
+                        <a href="england.html">Read the Diary →</a>
+                    </div>
+                </div>
+
+                <div class="post-card reveal" id="card-scotland">
+                    <div class="post-card-img" style="background-image: url('https://cdn.americachip.com/wp-content/uploads/2024/10/Escocia.jpg');"></div>
+                    <div class="post-card-content">
+                        <h3>Scotland: Highlands, Castles, and Legends</h3>
+                        <p>Exploring the rugged beauty of the Scottish Highlands, searching for Nessie, and wandering the Royal Mile in Edinburgh.</p>
+                        <a href="scotland.html">Read the Diary →</a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4 id="modal-title"></h4>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Triply Travel Blog. Your next adventure starts here.</p>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

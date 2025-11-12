@@ -1,0 +1,292 @@
+/* style.css */
+
+/* Paleta de Cores: */
+/* Principal: #ffc099 (Pêssego/Salmão Claro) */
+/* Secundária: #00687a (Azul-Petróleo Escuro) */
+/* Fundo: #F5F5F5 (Off-White/Cinza Claro) */
+
+:root {
+  --color-primary: #ffc099;
+  --color-secondary: #00687a;
+  --color-background: #F5F5F5;
+  --color-text: #333;
+  --color-light-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 200ms linear;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding-top: 60px; /* Espaço para o cabeçalho fixo */
+}
+
+/* --- Header e Navegação --- */
+header {
+  background-color: var(--color-secondary);
+  color: var(--color-light-text);
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: .2s ease;
+}
+.logo a {
+  font-size: 1.8em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: var(--color-light-text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.translate-btn {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.translate-btn:hover {
+  background-color: #ffaa77; /* Um pouco mais escuro */
+}
+
+/* --- Conteúdo Principal e Diários --- */
+main {
+  padding: 10px 0;
+}
+
+.hero {
+  background: url('hero-image-placeholder.jpg') no-repeat center center/cover; /* Substituir por imagem real */
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-light-text);
+}
+
+.hero h1 {
+  font-size: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.post-list, .daily-entry {
+  background-color: var(--color-light-text);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-list h2, .daily-entry h2 {
+  color: var(--color-secondary);
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.post-card {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card-img {
+  flex: 1;
+  min-width: 200px;
+  background: url('placeholder-country.jpg') no-repeat center center/cover; /* Substituir */
+}
+
+/* Estilos específicos para a página de cada país (para placeholdrs de imagem) */
+#card-malta .post-card-img { background-image: url('malta-placeholder.jpg'); } 
+#card-ireland .post-card-img { background-image: url('ireland-placeholder.jpg'); }
+#card-england .post-card-img { background-image: url('england-placeholder.jpg'); }
+#card-scotland .post-card-img { background-image: url('scotland-placeholder.jpg'); }
+
+.post-card-content {
+  flex: 2;
+  padding: 15px;
+}
+
+.post-card-content h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.post-card-content a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-card-content a:hover {
+  text-decoration: underline;
+}
+
+/* --- Estilos para as Páginas de Diário (Exemplo: malta.html) --- */
+.daily-entry h1 {
+  color: var(--color-secondary);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.daily-entry h3 {
+  color: var(--color-primary);
+  border-left: 5px solid var(--color-primary);
+  padding-left: 10px;
+  margin: 25px 0 15px 0;
+}
+
+.day-content img {
+  max-width: 100%;
+  display: block;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.day-content p a {
+  color: var(--color-secondary);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.day-content p a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-light-text);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* --- Pop-up/Modal --- */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: var(--color-text);
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h4 {
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* --- Animação Reveal.js (Fade-in) --- */
+.reveal {
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
